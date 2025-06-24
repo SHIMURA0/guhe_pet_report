@@ -1,0 +1,44 @@
+/* css/print.css */
+
+/* 页面设置 */
+@page {
+  size: A4; /* 设置纸张大小为 A4 */
+  @bottom-right {
+    content: "第" counter(page) "页"; /* 页码 */
+    font-size: 15px; /* 页码字体大小 */
+    margin-bottom: 12px;
+  }
+  /* 设置页码计数器 */
+  counter-reset: page;
+}
+
+/* 确保打印时的样式 */
+@media print {
+  body {
+    -webkit-print-color-adjust: exact; /* 确保打印时颜色准确 */
+    background-color: white; /* 打印背景色 */
+    color: black; /* 打印文本颜色 */
+  }
+
+  /* 在特定元素前插入分页 */
+  .page-break {
+    page-break-before: always; /* 在该元素之前换页 */
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 两列布局 */
+    gap: 10px; /* 垂直和水平间距 */
+    width: 100%; /* 100% 宽度 */
+  }
+
+  /*!* 调整打印时的排版 *!*/
+  /*h2 {*/
+  /*  font-size: 20px; !* 标题字体大小 *!*/
+  /*  margin-bottom: 10px;*/
+  /*}*/
+
+  /*p {*/
+  /*  font-size: 12px; !* 设置段落文字大小 *!*/
+  /*}*/
+}

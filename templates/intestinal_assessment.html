@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.tailwindcss.com"></script> <!-- 引入 Tailwind CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/intestinal_assessment.css"> <!-- 模块样式 -->
+  <link rel="stylesheet" href="../css/print.css" media="print"> <!-- 引入打印样式 -->
+</head>
+
+<body class="min-h-screen flex items-center justify-center p-4">
+<div class="w-full mx-auto bg-transparent overflow-hidden">
+<header class="flex gap-2 mb-4 pt-6 page-break">
+  <!-- 左侧蓝色容器 (约68%) -->
+  <div class="bg-gradient-to-r from-blue-600 to-teal-500 text-white p-6 flex items-center w-[80%] rounded-2xl">
+    <div>
+      <h1 class="text-3xl font-bold tracking-tight">肠道评估</h1>
+      <p class="text-sm opacity-80 mt-1">Assessment of Basic Gut Function</p>
+    </div>
+  </div>
+
+  <!-- 右侧灰色容器 (约29%) -->
+  <div class="bg-slate-100 p-4 flex items-center justify-center w-[20%] rounded-2xl">
+    <div class="flex items-baseline">
+      <span class="font-bold text-green-700" style="font-size: 50px">2</span>
+      <span class="text-lg text-slate-500 ml-1">/6</span>
+    </div>
+  </div>
+</header>
+
+<div class="bg-blue-50 p-4 rounded-lg mb-4 mt-4">
+
+
+    <div class="flex items-center">
+      <div class="bg-indigo-100 p-2 rounded-full mr-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24"
+             stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+        </svg>
+      </div>
+      <div>
+        <!--              <h2 class="font-bold text-gray-800" style="font-size: 13px">肠道整体指标</h2>-->
+        <p class="text-gray-600" style="font-size: 13px">
+          本肠道整体评估通过肠道菌群检测数据，运用生物信息学和人工智能算法将微生物组成转化为六大功能性指标。这些指标可以反映菌群微生态结构对肠道炎症、代谢、屏障功能等方面的潜在影响,
+          为个性化的肠道调理和健康管理提供科学依据。
+        </p>
+      </div>
+    </div>
+
+</div>
+
+<div class="mx-auto mt-2 p-4">
+
+  <div class="grid grid-cols-2 gap-y-3 gap-x-2">
+    <!-- 肠道炎症 -->
+    <div class="card p-4">
+      <div class="flex justify-between items-start mb-3">
+        <div class="flex items-center">
+          <div
+            class="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-r from-rose-400 to-red-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+          </div>
+          <div class="ml-3">
+            <h2 class="text-base font-semibold">肠道炎症</h2>
+            <!--<p class="text-xs text-emerald-500 font-medium">良好状态</p>-->
+            <p class="text-xs text-rose-500 font-medium">偏高水平</p>
+          </div>
+        </div>
+        <div class="text-right">
+          <span class="text-xl font-bold text-red-500">81</span>
+          <p class="text-xs text-gray-500">参考范围：0-75</p>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="range-indicator">
+          <div class="range-bar bg-red-500" style="left: 0; width: 81%;"></div>
+          <div class="current-value bg-red-500" style="left: 81%;"></div>
+        </div>
+        <div class="flex justify-between text-xs text-gray-500 mt-1">
+          <span>低</span>
+          <!--<span>标准范围</span>-->
+          <span>高</span>
+        </div>
+      </div>
+
+      <div class="text-xs text-gray-700 bg-gray-50 p-3 rounded-lg leading-relaxed">
+        <p class="mb-1">
+          这一指标反映了狗狗肠道内的免疫反应状态。通过评估该水平，可以了解狗狗的肠道健康，识别潜在的消化系统问题。健康的肠道通常维持适度的炎症水平，以支持正常免疫功能。</p>
+      </div>
+    </div>
+
+    <!-- 消化效率 -->
+    <div class="card p-4">
+      <div class="flex justify-between items-start mb-3">
+        <div class="flex items-center">
+          <div
+            class="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-r from-emerald-400 to-teal-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <div class="ml-3">
+            <h2 class="text-base font-semibold">消化效率</h2>
+            <p class="text-xs text-emerald-500 font-medium">良好状态</p>
+          </div>
+        </div>
+        <div class="text-right">
+          <span class="text-xl font-bold text-green-500">97</span>
+          <p class="text-xs text-gray-500">参考范围：25-100</p>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="range-indicator">
+          <div class="range-bar bg-green-500" style="left: 0; width: 97%;"></div>
+          <div class="current-value bg-green-500" style="left: 97%;"></div>
+        </div>
+        <div class="flex justify-between text-xs text-gray-500 mt-1">
+          <span>低</span>
+          <span>高</span>
+        </div>
+      </div>
+
+      <div class="text-xs text-gray-700 bg-gray-50 p-3 rounded-lg leading-relaxed">
+        <p class="mb-1">
+          这一指标反映了狗狗对食物营养的吸收能力。评估消化效率有助于了解狗狗的消化健康，识别潜在的营养不良风险。良好的消化效率确保狗狗最大限度地利用食物中的营养成分，支持整体健康。</p>
+      </div>
+    </div>
+
+
+    <!-- 肠道屏障 -->
+    <div class="card p-4">
+      <div class="flex justify-between items-start mb-3">
+        <div class="flex items-center">
+          <div
+            class="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-r from-rose-400 to-red-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+          </div>
+          <div class="ml-3">
+            <h2 class="text-base font-semibold">肠道屏障</h2>
+            <p class="text-xs text-rose-500 font-medium">偏低水平</p>
+          </div>
+        </div>
+        <div class="text-right">
+          <span class="text-xl font-bold text-red-500">17</span>
+          <p class="text-xs text-gray-500">参考范围：25-100</p>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="range-indicator">
+          <div class="range-bar bg-red-500" style="left: 0; width: 17%;"></div>
+          <div class="current-value bg-red-500" style="left: 17%;"></div>
+        </div>
+        <div class="flex justify-between text-xs text-gray-500 mt-1">
+          <span>低</span>
+          <span>高</span>
+        </div>
+      </div>
+
+      <div class="text-xs text-gray-700 bg-gray-50 p-3 rounded-lg leading-relaxed">
+        <p class="mb-1">
+          这一指标反映了狗狗肠道对有害物质的防御能力。通过评估肠道屏障功能，可以了解狗狗的消化健康，识别潜在的感染风险。健康的肠道屏障能够有效阻止有害物质进入血液，维持整体健康。</p>
+      </div>
+    </div>
+
+    <!-- 蛋白发酵 -->
+    <div class="card p-4">
+      <div class="flex justify-between items-start mb-3">
+        <div class="flex items-center">
+          <div
+            class="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-r from-emerald-400 to-teal-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <div class="ml-3">
+            <h2 class="text-base font-semibold">蛋白发酵</h2>
+            <p class="text-xs text-emerald-500 font-medium">良好状态</p>
+          </div>
+        </div>
+        <div class="text-right">
+          <span class="text-xl font-bold text-green-500">14</span>
+          <p class="text-xs text-gray-500">参考范围：0-70</p>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="range-indicator">
+          <div class="range-bar bg-green-500" style="left: 0; width: 20%;"></div>
+          <div class="current-value bg-green-500" style="left: 20%;"></div>
+        </div>
+        <div class="flex justify-between text-xs text-gray-500 mt-1">
+          <span>低</span>
+          <span>高</span>
+        </div>
+      </div>
+
+      <div class="text-xs text-gray-700 bg-gray-50 p-3 rounded-lg leading-relaxed">
+        <p class="mb-1">
+          这一指标反映了狗狗肠道内蛋白质的发酵过程。通过评估蛋白发酵，可以了解肠道内微生物活动，识别潜在的消化问题。适度的蛋白发酵对肠道健康有益，但过度则可能导致肠道产气增加，造成不适。</p>
+      </div>
+    </div>
+
+    <!-- 肠道产气 -->
+    <div class="card p-4">
+      <div class="flex justify-between items-start mb-3">
+        <div class="flex items-center">
+          <div
+            class="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-r from-rose-400 to-red-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+          </div>
+          <div class="ml-3">
+            <h2 class="text-base font-semibold">肠道产气</h2>
+            <p class="text-xs text-rose-500 font-medium">严重偏高</p>
+          </div>
+        </div>
+        <div class="text-right">
+          <span class="text-xl font-bold text-rose-500">94</span>
+          <p class="text-xs text-gray-500">参考范围：0-70</p>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="range-indicator">
+          <div class="range-bar bg-rose-500" style="left: 0; width: 94%;"></div>
+          <div class="current-value bg-rose-500" style="left: 94%;"></div>
+        </div>
+        <div class="flex justify-between text-xs text-gray-500 mt-1">
+          <span>低</span>
+          <!--<span>标准范围</span>-->
+          <span>高</span>
+        </div>
+      </div>
+
+      <div class="text-xs text-gray-700 bg-gray-50 p-3 rounded-lg leading-relaxed">
+        <p class="mb-1">
+          这一指标反映了狗狗消化过程中气体的生成情况。通过评估肠道产气水平，可以了解狗狗的消化健康，识别潜在的不适或异常。适度的气体生成是正常的，但过量可能导致胀气和不适。</p>
+      </div>
+    </div>
+
+    <!-- 代谢健康 -->
+    <div class="card p-4">
+      <div class="flex justify-between items-start mb-3">
+        <div class="flex items-center">
+          <div
+            class="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-r from-rose-400 to-red-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+          </div>
+          <div class="ml-3">
+            <h2 class="text-base font-semibold">代谢健康</h2>
+            <p class="text-xs text-rose-500 font-medium">严重偏低</p>
+          </div>
+        </div>
+        <div class="text-right">
+          <span class="text-xl font-bold text-red-500">1</span>
+          <p class="text-xs text-gray-500">参考范围：25-100</p>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="range-indicator">
+          <div class="range-bar bg-red-500" style="left: 0; width: 1%;"></div>
+          <div class="current-value bg-red-500" style="left: 1%;"></div>
+        </div>
+        <div class="flex justify-between text-xs text-gray-500 mt-1">
+          <span>低</span>
+          <span>高</span>
+        </div>
+      </div>
+
+      <div class="text-xs text-gray-700 bg-gray-50 p-3 rounded-lg leading-relaxed">
+        <p class="mb-1">
+          这一指标反映了狗狗在能量转化和营养利用方面的能力。通过评估该指标，可以了解狗狗的代谢状态，识别潜在的代谢问题。良好的代谢健康确保狗狗有效利用营养，以支持其生理功能。</p>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+</div>
+
+</body>
+</html>
