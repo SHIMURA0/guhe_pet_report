@@ -80,6 +80,8 @@ const selectedIntestinalAssessmentItems = [
   '肠道炎症', '消化效率', '肠道屏障', '蛋白发酵', '肠道产气', '代谢健康'
 ];
 
+let numberOfIntestinalAssessmentNormalItems = 0;
+
 /**
  * 判断指标值在正常范围内的状态
  * @param {string} itemValue - 当前指标值
@@ -125,6 +127,8 @@ function getIntestinalAssessmentCards(intestinalAssessmentData) {
 
         // 获取健康状态
         const itemLevel = getValueStatus(itemValue, normalRange);
+        if (itemLevel === '正常') {numberOfIntestinalAssessmentNormalItems++;}
+
         // 使用三元表达式判断状态描述
         const itemStatusDescription = itemLevel === '正常'
           ? '正常水平'
@@ -139,19 +143,27 @@ function getIntestinalAssessmentCards(intestinalAssessmentData) {
                 ${itemStatusSVG}
                 <div class="ml-3">
                   <h2 class="text-base font-semibold">${item}</h2>
-                  <p class="text-xs text-rose-500 font-medium">${itemStatusDescription}</p>
+                  <p class="text-xs ${itemLevel === '正常' ? 'text-green-500' : 'text-red-500'} font-medium">${itemStatusDescription}</p>
                 </div>
               </div>
               <div class="text-right">
-                <span class="text-xl font-bold text-red-500">${itemValue}</span>
+                <span
+                  class="text-xl font-bold ${itemLevel === '正常' ? 'text-green-500' : 'text-red-500'}">
+                  ${itemValue}
+                </span>
                 <p class="text-xs text-gray-500">参考范围：${normalRange}</p>
               </div>
             </div>
 
             <div class="mb-3">
               <div class="range-indicator">
-                <div class="range-bar bg-red-500" style="left: 0; width: ${itemValue}%;"></div>
-                <div class="current-value bg-red-500" style="left: ${itemValue}%;"></div>
+                <div class="
+                  range-bar
+                  ${itemLevel === '正常'
+                  ? 'bg-green-500'
+                  : 'bg-red-500'}"
+                  style="left: 0; width: ${itemValue}%;"></div>
+                <div class="current-value ${itemLevel === '正常' ? 'bg-green-500' : 'bg-red-500'}" style="left: ${itemValue}%;"></div>
               </div>
               <div class="flex justify-between text-xs text-gray-500 mt-1">
                 <span>低</span>
@@ -187,8 +199,8 @@ function generateIntestinalAssessmentHTML(reportData) {
       <!-- 右侧灰色容器 (约20%) -->
       <div class="bg-slate-100 p-4 flex items-center justify-center w-[20%] rounded-2xl">
         <div class="flex items-baseline">
-          <span class="font-bold text-green-700" style="font-size: 50px">2</span>
-          <span class="text-lg text-slate-500 ml-1">/6</span>
+          <span class="font-bold text-green-700" style="font-size: 50px">${numberOfIntestinalAssessmentNormalItems}</span>
+          <span class="text-lg text-slate-500 ml-1">/${selectedIntestinalAssessmentItems.length}</span>
         </div>
       </div>
     </header>
@@ -202,7 +214,7 @@ function generateIntestinalAssessmentHTML(reportData) {
         </div>
     </div>
 
-    <div class="mx-auto mt-2 p-4">
+    <div class="mx-auto mt-2">
       <div class="grid grid-cols-2 gap-y-3 gap-x-2">
         ${intestinalAssessmentCarsHTML}
       </div>
