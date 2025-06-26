@@ -53,7 +53,7 @@ async function fetchData(sampleId) {
 
     // 检查响应是否成功
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      return new Error(`HTTP error! status: ${response.status}`);
     }
     // 返回获取的数据
     return await response.json();
