@@ -10,6 +10,7 @@ import { loadGutMicrobiomeAssessment } from './gut_microbiome_assessment.js';
 import { loadTaxonomicCompositionAnalysisHTML } from './taxonomic_composition_analysis.js';
 import { loadDietaryStructureAndTraceElementsHTML } from './dietary_structure_and_trace_elements.js';
 import { loadOverallVitaminEvaluationHTML } from './overall_vitamin_evaluation.js';
+import { loadVitaminsTable } from './vitamins_tables.js';
 
 
 async function initialize(sampleId) {
@@ -356,4 +357,5 @@ document.addEventListener('DOMContentLoaded', () => {
   loadTaxonomicCompositionAnalysisHTML();
   loadDietaryStructureAndTraceElementsHTML(sampleData);
   loadOverallVitaminEvaluationHTML(sampleData);
+  loadVitaminsTable(sampleData);
 });
