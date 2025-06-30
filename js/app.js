@@ -11,6 +11,7 @@ import { loadTaxonomicCompositionAnalysisHTML } from './taxonomic_composition_an
 import { loadDietaryStructureAndTraceElementsHTML } from './dietary_structure_and_trace_elements.js';
 import { loadOverallVitaminEvaluationHTML } from './overall_vitamin_evaluation.js';
 import { loadVitaminsTable } from './vitamins_tables.js';
+import {loadOverallGutMicrobiomeMetabolomicsAssessmentHTML} from './overall_gut_microbiome_metabolomics_assessment.js';
 
 
 async function initialize(sampleId) {
@@ -347,6 +348,44 @@ const sampleData = {
       "正常范围": "6-98"
     }
   ],
+  "菌群代谢物": [
+    {
+      "name": "对甲酚（p-Cresol）",
+      "value": "27",
+      "正常范围": "0-85",
+      "说明": "尿毒症毒素、慢性肾病、神经行为疾病、结直肠癌、自闭症、慢性便秘 /"
+    },
+    {
+      "name": "吲哚",
+      "value": "14",
+      "正常范围": "15-95",
+      "说明": "食物上瘾、焦虑、慢性肾病/致病菌定植、炎症反应"
+    },
+    {
+      "name": "苯酚",
+      "value": "10",
+      "正常范围": "5-85",
+      "说明": "结直肠癌、糖尿病肾病、尿毒症、艰难梭菌定植 /"
+    },
+    {
+      "name": "腐胺",
+      "value": "63",
+      "正常范围": "5-85",
+      "说明": "结直肠癌、IBD、结肠炎、增加肠道通透、变形菌门正相关 / 炎症"
+    },
+    {
+      "name": "硫化氢",
+      "value": "21",
+      "正常范围": "5-85",
+      "说明": "IBD、腹胀气、抑制乳酸菌、心血管疾病、2型糖尿病、肝硬化 /"
+    },
+    {
+      "name": "尸胺",
+      "value": "35",
+      "正常范围": "5-85",
+      "说明": "肠炎、结直肠疾病、乳腺癌 / 阿尔茨海默病、帕金森病"
+    }
+  ],
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -358,4 +397,5 @@ document.addEventListener('DOMContentLoaded', () => {
   loadDietaryStructureAndTraceElementsHTML(sampleData);
   loadOverallVitaminEvaluationHTML(sampleData);
   loadVitaminsTable(sampleData);
+  loadOverallGutMicrobiomeMetabolomicsAssessmentHTML(sampleData);
 });
