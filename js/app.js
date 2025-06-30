@@ -8,6 +8,7 @@ import {loadOverallHealthMetricsAnalysisHTML} from './overall_health_metrics_ana
 import { loadIntestinalAssessment } from './intestinal_assessment.js';
 import { loadGutMicrobiomeAssessment } from './gut_microbiome_assessment.js';
 import { loadTaxonomicCompositionAnalysisHTML } from './taxonomic_composition_analysis.js';
+import { loadDietaryStructureAndTraceElementsHTML } from './dietary_structure_and_trace_elements.js';
 
 
 async function initialize(sampleId) {
@@ -156,7 +157,194 @@ const sampleData = {
       "正常范围": "25-100",
       "desc": "高表示抗生素使用后整个菌群更易恢复回使用前的状态，低表示菌群构成很容易发生变化。"
     }
-  ]
+  ],
+  "营养": [
+    {
+      "name": "碳水化合物",
+      "value": "33",
+      "正常范围": "20-90"
+    },
+    {
+      "name": "蛋白质",
+      "value": "41",
+      "正常范围": "20-90"
+    },
+    {
+      "name": "脂肪",
+      "value": "15",
+      "正常范围": "20-90"
+    },
+    {
+      "name": "盐",
+      "value": "8",
+      "正常范围": "0-75"
+    },
+    {
+      "name": "糖",
+      "value": "94",
+      "正常范围": "0-75"
+    },
+    {
+      "name": "纤维",
+      "value": "28",
+      "正常范围": "20-98"
+    },
+    {
+      "name": "铁",
+      "value": "23",
+      "正常范围": "15-100"
+    },
+    {
+      "name": "锌",
+      "value": "59",
+      "正常范围": "15-100"
+    },
+    {
+      "name": "乙酸",
+      "value": "23",
+      "正常范围": "15-98"
+    },
+    {
+      "name": "丙酸",
+      "value": "3",
+      "正常范围": "15-98"
+    },
+    {
+      "name": "丁酸",
+      "value": "46",
+      "正常范围": "15-98"
+    },
+    {
+      "name": "维生素A",
+      "value": "34",
+      "正常范围": "15-100"
+    },
+    {
+      "name": "维生素B1",
+      "value": "93",
+      "正常范围": "15-100"
+    },
+    {
+      "name": "维生素B2",
+      "value": "83",
+      "正常范围": "15-100"
+    },
+    {
+      "name": "维生素B6",
+      "value": "79",
+      "正常范围": "15-100"
+    },
+    {
+      "name": "维生素B12",
+      "value": "87",
+      "正常范围": "15-100"
+    },
+    {
+      "name": "叶酸",
+      "value": "33",
+      "正常范围": "15-100"
+    },
+    {
+      "name": "维生素C",
+      "value": "74",
+      "正常范围": "15-100"
+    },
+    {
+      "name": "维生素D",
+      "value": "80",
+      "正常范围": "15-100"
+    },
+    {
+      "name": "维生素E",
+      "value": "1",
+      "正常范围": "15-100"
+    },
+    {
+      "name": "维生素K",
+      "value": "24",
+      "正常范围": "15-100"
+    },
+    {
+      "name": "苏氨酸",
+      "value": "97",
+      "正常范围": "6-98"
+    },
+    {
+      "name": "异亮氨酸",
+      "value": "95",
+      "正常范围": "6-98"
+    },
+    {
+      "name": "亮氨酸",
+      "value": "94",
+      "正常范围": "6-98"
+    },
+    {
+      "name": "赖氨酸",
+      "value": "72",
+      "正常范围": "6-98"
+    },
+    {
+      "name": "蛋氨酸",
+      "value": "99",
+      "正常范围": "6-98"
+    },
+    {
+      "name": "半胱氨酸",
+      "value": "78",
+      "正常范围": "6-98"
+    },
+    {
+      "name": "苯丙氨酸",
+      "value": "94",
+      "正常范围": "6-98"
+    },
+    {
+      "name": "酪氨酸",
+      "value": "97",
+      "正常范围": "6-98"
+    },
+    {
+      "name": "缬氨酸",
+      "value": "98",
+      "正常范围": "6-98"
+    },
+    {
+      "name": "组氨酸",
+      "value": "74",
+      "正常范围": "6-98"
+    },
+    {
+      "name": "丙氨酸",
+      "value": "65",
+      "正常范围": "6-98"
+    },
+    {
+      "name": "谷氨酸",
+      "value": "83",
+      "正常范围": "6-98"
+    },
+    {
+      "name": "甘氨酸",
+      "value": "22",
+      "正常范围": "6-98"
+    },
+    {
+      "name": "脯氨酸",
+      "value": "65",
+      "正常范围": "6-98"
+    },
+    {
+      "name": "丝氨酸",
+      "value": "99",
+      "正常范围": "6-98"
+    },
+    {
+      "name": "色氨酸",
+      "value": "83",
+      "正常范围": "6-98"
+    }
+  ],
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -165,4 +353,5 @@ document.addEventListener('DOMContentLoaded', () => {
   loadOverallHealthMetricsAnalysisHTML(sampleData); // 加载 overall_health_metrics_analysis.html 内容
   loadGutMicrobiomeAssessment(sampleData); // 加载 gut_microbiome_assessment.html 内容
   loadTaxonomicCompositionAnalysisHTML();
+  loadDietaryStructureAndTraceElementsHTML(sampleData);
 });
