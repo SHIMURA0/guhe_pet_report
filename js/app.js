@@ -7,6 +7,7 @@ import { loadNoteContent } from './note.js';
 import {loadOverallHealthMetricsAnalysisHTML} from './overall_health_metrics_analysis.js';
 import { loadIntestinalAssessment } from './intestinal_assessment.js';
 import { loadGutMicrobiomeAssessment } from './gut_microbiome_assessment.js';
+import { loadTaxonomicCompositionAnalysisHTML } from './taxonomic_composition_analysis.js';
 
 
 async function initialize(sampleId) {
@@ -163,4 +164,5 @@ document.addEventListener('DOMContentLoaded', () => {
   loadIntestinalAssessment(sampleData); // 加载 intestinal_assessment.html 内容
   loadOverallHealthMetricsAnalysisHTML(sampleData); // 加载 overall_health_metrics_analysis.html 内容
   loadGutMicrobiomeAssessment(sampleData); // 加载 gut_microbiome_assessment.html 内容
+  loadTaxonomicCompositionAnalysisHTML();
 });
