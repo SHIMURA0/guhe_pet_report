@@ -14,6 +14,8 @@ import { loadVitaminsTable } from './vitamins_tables.js';
 import {loadOverallGutMicrobiomeMetabolomicsAssessmentHTML} from './overall_gut_microbiome_metabolomics_assessment.js';
 import {loadShortChainFattyAcidsHTML} from "./short_chain_fatty_acids.js";
 import {loadAminoAcidsHTML} from "./amino_acids.js";
+import {loadDetectedGutMicrobiomeGenusHTML} from "./detected_gut_microbiome_genus.js";
+import {loadDetectedGutMicrobiomeSpeciesHTML} from "./detected_gut_microbiome_species.js";
 
 async function initialize(sampleId) {
   try {
@@ -387,6 +389,675 @@ const sampleData = {
       "说明": "肠炎、结直肠疾病、乳腺癌 / 阿尔茨海默病、帕金森病"
     }
   ],
+  "菌群构成-属": [
+    {
+      "name": "UBA7057",
+      "value": "0.0033%",
+      "群体水平": "94"
+    },
+    {
+      "name": "CAG-611",
+      "value": "0.0033%",
+      "群体水平": "95"
+    },
+    {
+      "name": "分枝杆菌属 Mycobacterium",
+      "value": "0.0033%",
+      "群体水平": "95"
+    },
+    {
+      "name": "类梭菌属 Paeniclostridium",
+      "value": "0.01%",
+      "群体水平": "97"
+    },
+    {
+      "name": "CAG-115",
+      "value": "0.0033%",
+      "群体水平": "86"
+    },
+    {
+      "name": "厌氧生孢菌属 Anaerosporobacter",
+      "value": "0.0371%",
+      "群体水平": "96"
+    },
+    {
+      "name": "Epulopiscium",
+      "value": "0.9003%",
+      "群体水平": "99"
+    },
+    {
+      "name": "Phocea",
+      "value": "0.0168%",
+      "群体水平": "92"
+    },
+    {
+      "name": "UBA11940",
+      "value": "0.0067%",
+      "群体水平": "88"
+    },
+    {
+      "name": "土生孢杆菌属 Terrisporobacter",
+      "value": "1.1027%",
+      "群体水平": "99"
+    },
+    {
+      "name": "丁酸球菌属 Butyricicoccus",
+      "value": "20.9621%",
+      "群体水平": "99"
+    },
+    {
+      "name": "龙包茨氏菌属 Romboutsia",
+      "value": "0.0573%",
+      "群体水平": "97"
+    },
+    {
+      "name": "幼婴粪杆菌属 Coprobacter",
+      "value": "0.0033%",
+      "群体水平": "71"
+    },
+    {
+      "name": "韩生命工学研究院菌属 Absiella",
+      "value": "0.0101%",
+      "群体水平": "80"
+    },
+    {
+      "name": "丁酸弧菌属 Butyrivibrio",
+      "value": "0.2189%",
+      "群体水平": "98"
+    },
+    {
+      "name": "CAG-194",
+      "value": "0.0066%",
+      "群体水平": "88"
+    },
+    {
+      "name": "拟梭菌属 Clostridioides",
+      "value": "0.0033%",
+      "群体水平": "91"
+    },
+    {
+      "name": "克雷伯氏菌属 Klebsiella",
+      "value": "0.0539%",
+      "群体水平": "36"
+    },
+    {
+      "name": "假解黄酮菌属 Pseudoflavonifractor",
+      "value": "0.0876%",
+      "群体水平": "97"
+    },
+    {
+      "name": "Prevotellamassilia",
+      "value": "0.0033%",
+      "群体水平": "42"
+    },
+    {
+      "name": "CAG-127",
+      "value": "0.0033%",
+      "群体水平": "55"
+    },
+    {
+      "name": "副普雷沃氏菌属 Paraprevotella",
+      "value": "0.0033%",
+      "群体水平": "49"
+    },
+    {
+      "name": "UBA9502",
+      "value": "0.0201%",
+      "群体水平": "71"
+    },
+    {
+      "name": "志贺氏菌属 Shigella",
+      "value": "0.01%",
+      "群体水平": "69"
+    },
+    {
+      "name": "艾森贝格氏菌属 Eisenbergiella",
+      "value": "0.0472%",
+      "群体水平": "54"
+    },
+    {
+      "name": "厌氧棒菌属 Anaerotignum",
+      "value": "4.8126%",
+      "群体水平": "99"
+    },
+    {
+      "name": "UBA7160",
+      "value": "0.0067%",
+      "群体水平": "27"
+    },
+    {
+      "name": "劳森氏杆菌属 Lawsonibacter",
+      "value": "0.246%",
+      "群体水平": "88"
+    },
+    {
+      "name": "萨特氏菌属 Sutterella",
+      "value": "7.9731%",
+      "群体水平": "99"
+    },
+    {
+      "name": "Tyzzerella",
+      "value": "2.8058%",
+      "群体水平": "99"
+    },
+    {
+      "name": "孪生球菌属 Gemella",
+      "value": "0.0033%",
+      "群体水平": "53"
+    },
+    {
+      "name": "厌氧棒状菌属 Anaerostipes",
+      "value": "0.0101%",
+      "群体水平": "37"
+    },
+    {
+      "name": "粪球菌属 Coprococcus",
+      "value": "0.0033%",
+      "群体水平": "17"
+    },
+    {
+      "name": "巨单胞菌属 Megamonas",
+      "value": "0.0067%",
+      "群体水平": "40"
+    },
+    {
+      "name": "CAG-81",
+      "value": "0.3976%",
+      "群体水平": "72"
+    },
+    {
+      "name": "沙门氏菌属 Salmonella",
+      "value": "0.0134%",
+      "群体水平": "51"
+    },
+    {
+      "name": "毛螺菌属 Lachnospira",
+      "value": "0.0033%",
+      "群体水平": "18"
+    },
+    {
+      "name": "Dorea菌属 Dorea",
+      "value": "0.0301%",
+      "群体水平": "23"
+    },
+    {
+      "name": "柯林斯氏菌属 Collinsella",
+      "value": "0.0168%",
+      "群体水平": "30"
+    },
+    {
+      "name": "别样杆菌属 Alistipes",
+      "value": "0.0033%",
+      "群体水平": "12"
+    },
+    {
+      "name": "解黄酮菌属 Flavonifractor",
+      "value": "0.6373%",
+      "群体水平": "93"
+    },
+    {
+      "name": "直肠真杆菌属 Agathobacter",
+      "value": "0.0232%",
+      "群体水平": "21"
+    },
+    {
+      "name": "戴阿利斯特杆菌属 Dialister",
+      "value": "0.0033%",
+      "群体水平": "11"
+    },
+    {
+      "name": "罗氏菌属 Roseburia",
+      "value": "1.5712%",
+      "群体水平": "65"
+    },
+    {
+      "name": "双歧杆菌属 Bifidobacterium",
+      "value": "0.0167%",
+      "群体水平": "18"
+    },
+    {
+      "name": "经黏液真杆菌属 Blautia",
+      "value": "4.8527%",
+      "群体水平": "97"
+    },
+    {
+      "name": "泛菌属 Pantoea",
+      "value": "0.0033%",
+      "群体水平": "99"
+    },
+    {
+      "name": "粪杆菌属 Faecalibacterium",
+      "value": "0.0066%",
+      "群体水平": "4"
+    },
+    {
+      "name": "优杆菌属 Eubacterium",
+      "value": "0.9577%",
+      "群体水平": "81"
+    },
+    {
+      "name": "Lachnoclostridium",
+      "value": "15.8682%",
+      "群体水平": "99"
+    },
+    {
+      "name": "拟杆菌属 Bacteroides",
+      "value": "11.8101%",
+      "群体水平": "32"
+    },
+    {
+      "name": "梭菌属 Clostridium",
+      "value": "14.5424%",
+      "群体水平": "98"
+    },
+    {
+      "name": "埃希氏菌属 Escherichia",
+      "value": "4.5192%",
+      "群体水平": "70"
+    },
+    {
+      "name": "普雷沃氏菌属 Prevotella",
+      "value": "0.0266%",
+      "群体水平": "3"
+    },
+    {
+      "name": "瘤胃球菌属 Ruminococcus",
+      "value": "3.3251%",
+      "群体水平": "84"
+    },
+    {
+      "name": "链球菌属  Streptococcus",
+      "value": "0.0101%",
+      "群体水平": "7"
+    }
+  ],
+  "菌群构成-种": [
+    {
+      "name": "假小链双歧杆菌 Bifidobacterium pseudocatenulatum",
+      "value": "0.0033%",
+      "群体水平": "99"
+    },
+    {
+      "name": "CAG-115 sp003507295",
+      "value": "0.0033%",
+      "群体水平": "97"
+    },
+    {
+      "name": "Lachnoclostridium algidixylanolyticum",
+      "value": "0.0033%",
+      "群体水平": "98"
+    },
+    {
+      "name": "运动厌氧生孢菌 Anaerosporobacter mobilis",
+      "value": "0.0371%",
+      "群体水平": "99"
+    },
+    {
+      "name": "纤细真杆菌 Eubacterium tenue",
+      "value": "0.5059%",
+      "群体水平": "99"
+    },
+    {
+      "name": "Lachnoclostridium colinum",
+      "value": "0.0269%",
+      "群体水平": "99"
+    },
+    {
+      "name": "无乳链球菌 Streptococcus agalactiae",
+      "value": "0.0101%",
+      "群体水平": "98"
+    },
+    {
+      "name": "索氏类梭菌 Paeniclostridium sordellii",
+      "value": "0.0033%",
+      "群体水平": "96"
+    },
+    {
+      "name": "粪柯林斯氏菌 Collinsella stercoris",
+      "value": "0.0168%",
+      "群体水平": "93"
+    },
+    {
+      "name": "解葡糖酰胺布劳特氏菌 Blautia glucerasea",
+      "value": "0.0809%",
+      "群体水平": "99"
+    },
+    {
+      "name": "Blautia sp000432195",
+      "value": "0.7554%",
+      "群体水平": "99"
+    },
+    {
+      "name": "Tyzzerella sp000411335",
+      "value": "0.0101%",
+      "群体水平": "98"
+    },
+    {
+      "name": "沉积物龙包茨氏菌 Romboutsia sedimentorum",
+      "value": "0.0573%",
+      "群体水平": "98"
+    },
+    {
+      "name": "鸡盲肠丁酸球菌 Butyricicoccus pullicaecorum",
+      "value": "20.6554%",
+      "群体水平": "99"
+    },
+    {
+      "name": "穗状丁酸弧菌 Butyrivibrio crossotus",
+      "value": "0.2089%",
+      "群体水平": "99"
+    },
+    {
+      "name": "艰难梭菌 Clostridium difficile",
+      "value": "0.0269%",
+      "群体水平": "99"
+    },
+    {
+      "name": "CAG-194 sp000432915",
+      "value": "0.0033%",
+      "群体水平": "93"
+    },
+    {
+      "name": "苛求幼婴粪杆菌 Coprobacter fastidiosus",
+      "value": "0.0033%",
+      "群体水平": "80"
+    },
+    {
+      "name": "Phocea massiliensis",
+      "value": "0.0168%",
+      "群体水平": "92"
+    },
+    {
+      "name": "粪厌氧棒状菌 Anaerostipes caccae",
+      "value": "0.0101%",
+      "群体水平": "95"
+    },
+    {
+      "name": "Absiella dolichum",
+      "value": "0.0101%",
+      "群体水平": "88"
+    },
+    {
+      "name": "石油土生孢杆菌 Terrisporobacter petrolearius",
+      "value": "1.1027%",
+      "群体水平": "99"
+    },
+    {
+      "name": "Clostridium sp001916075",
+      "value": "0.0033%",
+      "群体水平": "77"
+    },
+    {
+      "name": "Blautia sp000433815",
+      "value": "0.0438%",
+      "群体水平": "94"
+    },
+    {
+      "name": "Clostridium lactatifermentans",
+      "value": "0.0033%",
+      "群体水平": "81"
+    },
+    {
+      "name": "动物双歧杆菌 Bifidobacterium animalis",
+      "value": "0.0134%",
+      "群体水平": "96"
+    },
+    {
+      "name": "规则粪球菌 Coprococcus catus",
+      "value": "0.0033%",
+      "群体水平": "52"
+    },
+    {
+      "name": "Sutterella massiliensis",
+      "value": "7.9496%",
+      "群体水平": "99"
+    },
+    {
+      "name": "解甘草皂苷梭菌 Clostridium glycyrrhizinilyticum",
+      "value": "0.0773%",
+      "群体水平": "96"
+    },
+    {
+      "name": "艰难拟梭菌 Clostridioides difficile",
+      "value": "0.0033%",
+      "群体水平": "91"
+    },
+    {
+      "name": "双孢梭菌 Clostridium disporicum",
+      "value": "0.6844%",
+      "群体水平": "99"
+    },
+    {
+      "name": "解糖梭菌 Clostridium saccharolyticum",
+      "value": "0.0742%",
+      "群体水平": "92"
+    },
+    {
+      "name": "Lachnoclostridium sp000155435",
+      "value": "11.6228%",
+      "群体水平": "99"
+    },
+    {
+      "name": "Anaerotignum sp001304995",
+      "value": "4.7219%",
+      "群体水平": "99"
+    },
+    {
+      "name": "CAG-81 sp000435795",
+      "value": "0.3943%",
+      "群体水平": "97"
+    },
+    {
+      "name": "Lawsonibacter sp900066825",
+      "value": "0.2427%",
+      "群体水平": "96"
+    },
+    {
+      "name": "鲍氏志贺菌 Shigella boydii",
+      "value": "0.0033%",
+      "群体水平": "71"
+    },
+    {
+      "name": "假毛茸属毛囊菌 Pseudoflavonifractor capillosus",
+      "value": "0.0876%",
+      "群体水平": "98"
+    },
+    {
+      "name": "光泽副普雷沃氏菌 Paraprevotella clara",
+      "value": "0.0033%",
+      "群体水平": "58"
+    },
+    {
+      "name": "汉氏布劳特氏菌 Blautia hansenii",
+      "value": "1.1566%",
+      "群体水平": "99"
+    },
+    {
+      "name": "肠道罗斯拜瑞氏菌 Roseburia intestinalis",
+      "value": "0.0571%",
+      "群体水平": "91"
+    },
+    {
+      "name": "Eisenbergiella sp900066775",
+      "value": "0.0472%",
+      "群体水平": "68"
+    },
+    {
+      "name": "痢疾志贺菌 Shigella dysenteriae",
+      "value": "0.0067%",
+      "群体水平": "77"
+    },
+    {
+      "name": "类腐败梭菌 Clostridium paraputrificum",
+      "value": "9.1001%",
+      "群体水平": "99"
+    },
+    {
+      "name": "Agathobacter sp000434275",
+      "value": "0.0033%",
+      "群体水平": "55"
+    },
+    {
+      "name": "副溶血孪生球菌 Gemella parahaemolysans",
+      "value": "0.0033%",
+      "群体水平": "73"
+    },
+    {
+      "name": "卵形布劳特氏菌 Blautia obeum",
+      "value": "0.0236%",
+      "群体水平": "55"
+    },
+    {
+      "name": "昂氏别样杆菌 Alistipes onderdonkii",
+      "value": "0.0033%",
+      "群体水平": "37"
+    },
+    {
+      "name": "长下颌真杆菌 Eubacterium dolichum",
+      "value": "0.4518%",
+      "群体水平": "99"
+    },
+    {
+      "name": "隐藏梭菌 Clostridium celatum",
+      "value": "1.0152%",
+      "群体水平": "96"
+    },
+    {
+      "name": "Lachnospira sp000437735",
+      "value": "0.0033%",
+      "群体水平": "43"
+    },
+    {
+      "name": "Lachnoclostridium aldenense",
+      "value": "0.0033%",
+      "群体水平": "47"
+    },
+    {
+      "name": "扭链瘤胃球菌 Ruminococcus torques",
+      "value": "0.0066%",
+      "群体水平": "34"
+    },
+    {
+      "name": "Bacteroides sp002161565",
+      "value": "0.0033%",
+      "群体水平": "26"
+    },
+    {
+      "name": "Lachnoclostridium sp001517625",
+      "value": "4.2086%",
+      "群体水平": "99"
+    },
+    {
+      "name": "Tyzzerella nexilis",
+      "value": "2.263%",
+      "群体水平": "98"
+    },
+    {
+      "name": "卵形拟杆菌 Bacteroides ovatus",
+      "value": "0.4519%",
+      "群体水平": "89"
+    },
+    {
+      "name": "多枝梭菌 Clostridium ramosum",
+      "value": "0.0573%",
+      "群体水平": "82"
+    },
+    {
+      "name": "Clostridium sp003024715",
+      "value": "3.4064%",
+      "群体水平": "98"
+    },
+    {
+      "name": "人罗斯拜瑞氏菌 Roseburia hominis",
+      "value": "1.5075%",
+      "群体水平": "92"
+    },
+    {
+      "name": "食葡糖罗斯拜瑞氏菌 Roseburia inulinivorans",
+      "value": "0.0033%",
+      "群体水平": "20"
+    },
+    {
+      "name": "细绳形巨单胞菌 Megamonas funiformis",
+      "value": "0.0067%",
+      "群体水平": "42"
+    },
+    {
+      "name": "肠炎鼠伤寒沙门氏菌 Salmonella enterica",
+      "value": "0.0134%",
+      "群体水平": "52"
+    },
+    {
+      "name": "韦氏布劳特氏菌 Blautia wexlerae",
+      "value": "2.7285%",
+      "群体水平": "98"
+    },
+    {
+      "name": "珀氏解黄酮菌 Flavonifractor plautii",
+      "value": "0.6373%",
+      "群体水平": "93"
+    },
+    {
+      "name": "杜雷拟杆菌 Bacteroides dorei",
+      "value": "0.0066%",
+      "群体水平": "14"
+    },
+    {
+      "name": "直肠有益杆状菌 Agathobacter rectalis",
+      "value": "0.0099%",
+      "群体水平": "22"
+    },
+    {
+      "name": "Prevotella sp000434975",
+      "value": "0.0134%",
+      "群体水平": "39"
+    },
+    {
+      "name": "脆弱拟杆菌 Bacteroides fragilis",
+      "value": "0.2326%",
+      "群体水平": "59"
+    },
+    {
+      "name": "单形拟杆菌 Bacteroides uniformis",
+      "value": "0.0201%",
+      "群体水平": "10"
+    },
+    {
+      "name": "罗达斯氏泛菌 Pantoea rodasii",
+      "value": "0.0033%",
+      "群体水平": "99"
+    },
+    {
+      "name": "粪便拟杆菌 Bacteroides stercoris",
+      "value": "0.988%",
+      "群体水平": "44"
+    },
+    {
+      "name": "活泼瘤胃球菌 Ruminococcus gnavus",
+      "value": "2.8969%",
+      "群体水平": "96"
+    },
+    {
+      "name": "普通拟杆菌 Bacteroides vulgatus",
+      "value": "4.4012%",
+      "群体水平": "62"
+    },
+    {
+      "name": "普氏栖粪杆菌 Faecalibacterium prausnitzii",
+      "value": "0.0066%",
+      "群体水平": "7"
+    },
+    {
+      "name": "普氏菌 Prevotella copri",
+      "value": "0.0033%",
+      "群体水平": "10"
+    },
+    {
+      "name": "大肠杆菌 Escherichia coli",
+      "value": "0.0772%",
+      "群体水平": "18"
+    }
+  ],
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -401,4 +1072,6 @@ document.addEventListener('DOMContentLoaded', () => {
   loadOverallGutMicrobiomeMetabolomicsAssessmentHTML(sampleData);
   loadShortChainFattyAcidsHTML(sampleData);
   loadAminoAcidsHTML(sampleData);
+  loadDetectedGutMicrobiomeGenusHTML(sampleData);
+  loadDetectedGutMicrobiomeSpeciesHTML(sampleData);
 });
