@@ -13,6 +13,7 @@ import { loadOverallVitaminEvaluationHTML } from './overall_vitamin_evaluation.j
 import { loadVitaminsTable } from './vitamins_tables.js';
 import {loadOverallGutMicrobiomeMetabolomicsAssessmentHTML} from './overall_gut_microbiome_metabolomics_assessment.js';
 import {loadShortChainFattyAcidsHTML} from "./short_chain_fatty_acids.js";
+import {loadAminoAcidsHTML} from "./amino_acids.js";
 
 async function initialize(sampleId) {
   try {
@@ -399,4 +400,5 @@ document.addEventListener('DOMContentLoaded', () => {
   loadVitaminsTable(sampleData);
   loadOverallGutMicrobiomeMetabolomicsAssessmentHTML(sampleData);
   loadShortChainFattyAcidsHTML(sampleData);
+  loadAminoAcidsHTML(sampleData);
 });
