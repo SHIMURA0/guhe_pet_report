@@ -3,11 +3,11 @@
 /* 页面设置 */
 @page {
   size: A4; /* 设置纸张大小为 A4 */
-  @bottom-right {
-    content: "第" counter(page) "页"; /* 页码 */
-    font-size: 15px; /* 页码字体大小 */
-    margin-bottom: 12px;
-  }
+  /*@bottom-right {*/
+  /*  content: "第" counter(page) "页"; !* 页码 *!*/
+  /*  font-size: 15px; !* 页码字体大小 *!*/
+  /*  margin-bottom: 12px;*/
+  /*}*/
   /* 设置页码计数器 */
   counter-reset: page;
 }
@@ -23,6 +23,15 @@
   /* 在特定元素前插入分页 */
   .page-break {
     page-break-before: always; /* 在该元素之前换页 */
+  }
+
+  table thead {
+    display: table-row-group;
+  }
+
+  table thead tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   .grid {
